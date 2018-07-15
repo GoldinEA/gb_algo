@@ -8,3 +8,4 @@ numbers = [int(input(x)) for x in questions]
 
 print(f'среднее число среди трех введенных это {numbers[1]}')
 
+#for pull request
