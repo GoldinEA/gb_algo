@@ -1,13 +1,6 @@
-year = int(input('Введите год:'))
+number = input('Введите любое число: ')
 
+number_ghz = int(input('введите число частоту которого вы хотите проверить: '))
 
-if year % 4 != 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print('год високосный')
-        else:
-            print('год обычный')
-    else:
-        print('год обычный')
-else:
-    print('год високосный')
+numbers = [x for x in number if int(x) == number_ghz]
+print(f'число {number_ghz} встречается в числе {number}  - {len(numbers)} раз')
