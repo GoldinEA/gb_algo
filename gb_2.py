@@ -1,6 +1,10 @@
-number = input('Введите любое число')
+#2. Во втором массиве сохранить индексы четных элементов первого массива. Например, если дан массив со значениями
+#8, 3, 15, 6, 4, 2, то во второй массив надо заполнить значениями 0, 3, 4, 5 (индексация начинается с нуля),
+#т.к. именно в этих позициях первого массива стоят четные числа.
+import random
+nums_list = [random.randint(1,100) for x in range(10)]
+index_list = [nums_list.index(x) for x in nums_list if x % 2 == 0]
 
-evens = [num for num in number if int(num) % 2 == 0]
-odds = [num for num in number if int(num) % 2 != 0]
 
-print(f'количество четных чисел равно {len(evens)}, количество нечетных чисел равно {len(odds)}')
+
+

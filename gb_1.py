@@ -1,41 +1,17 @@
+#1. В диапазоне натуральных чисел от 2 до 99 определить, сколько из них кратны любому из чисел в диапазоне от 2 до 9.
+
+num_list = [x for x in range(2, 100)]
+
+mult_dict = {2:[], 3:[], 4:[], 5:[], 6:[], 7:[], 8:[], 9:[]}
+
+for mult, values in mult_dict.items():
+    for num in num_list:
+        if num % mult == 0:
+            mult_dict[mult].append(num)
+    print(f'{len(mult_dict[mult])} чисел кратно {mult}')
 
 
-def plus(num):
-    numbers = num.split('+')
-    return int(numbers[0]) + int(numbers[1])
 
-def mult(num):
-    numbers = num.split('*')
-    return int(numbers[0]) * int(numbers[1])
 
-def minus(num):
-    numbers = num.split('-')
-    return int(numbers[0]) - int(numbers[1])
-
-def division(num):
-    numbers = num.split('/')
-    return int(numbers[0]) / int(numbers[1])
-
-while True:
-    print('для того, чтобы выйти из программы введите 0 и нажмите enter')
-    number = input('введите выражение в формате 3+4: ')
-    if '+' in number:
-        print(plus(number))
-        continue
-    elif '*' in number:
-        print(mult(number))
-        continue
-    elif '-' in number:
-        print(minus(number))
-        continue
-    elif '/' in number:
-        print(division(number))
-        continue
-    elif number == '0':
-        print('Программа завершена')
-        break
-    else:
-        print('Выражение введено некорректно - повторите запрос')
-        continue
 
 
