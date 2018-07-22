@@ -1,11 +1,17 @@
+#1. В диапазоне натуральных чисел от 2 до 99 определить, сколько из них кратны любому из чисел в диапазоне от 2 до 9.
 
-number = input('Введите число: ')
-mult = 1
-addict = 0
-for elem in number:
-    mult *= int(elem)
-    addict += int(elem)
+num_list = [x for x in range(2, 100)]
 
-print(f'Произведение введенных чисел равно: {mult}')
-print(f'Сумма введенных чисел равна: {addict}')
+mult_dict = {2:[], 3:[], 4:[], 5:[], 6:[], 7:[], 8:[], 9:[]}
+
+for mult, values in mult_dict.items():
+    for num in num_list:
+        if num % mult == 0:
+            mult_dict[mult].append(num)
+    print(f'{len(mult_dict[mult])} чисел кратно {mult}')
+
+
+
+
+
 
